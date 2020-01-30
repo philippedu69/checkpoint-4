@@ -1,12 +1,18 @@
 easy_admin:
     site_name: 'Wild Circus'
+    design:
+        brand_color: 'rgb(238, 175, 3)'
 
     entities:
         Picture:
             class: App\Entity\Picture
+            label: 'Images'
         Category:
             class: App\Entity\Category
+            label: 'Categories'
         User:
             class: App\Entity\User
+            label: 'Clients'
         Show:
             class: App\Entity\Show
+            label: 'spectacles'
