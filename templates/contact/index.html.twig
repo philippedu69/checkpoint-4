@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <h1 style="text-align: center">Contactez nous</h1>
+    {{ form_start(form) }}
+
+            <div class="md-form">
+                {{ form_label (form.name, 'Nom :') }}
+                {{ form_widget(form.name) }}
+
+            </div>
+
+            <div class="md-form">
+                {{ form_label (form.email, 'Email :') }}
+                {{ form_widget(form.email) }}
+            </div>
+
+            <div class="md-form">
+                {{ form_label (form.message, 'Message :') }}
+                {{ form_widget(form.message) }}
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn-primary float-right" type="submit">Envoyer</button>
+            </div>
+
+    {{ form_end(form) }}
+
+
+{% endblock %}

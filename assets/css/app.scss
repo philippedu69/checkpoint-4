@@ -1,0 +1,43 @@
+$theme-colors: (
+    "primary": rgb(238, 175, 3),
+    "secondary": rgb(235, 36, 9)
+);
+
+html {
+  height: 100%;
+}
+body {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 150px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+// CSS navbar
+
+#navbar {
+  display: flex;
+}
+
+#onglet {
+  margin-right: 0;
+  margin-left: 70%;
+}
+
+.img {
+  margin-right: 2%;
+  margin-left: 2%;
+}
+// CSS footer
+
+#logos {
+  padding-left: 25%;
+}
+@import "~bootstrap/scss/bootstrap";
