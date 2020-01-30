@@ -3,8 +3,19 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav" id="onglet">
+            {% if app.user %}
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="{{ path('app_logout') }}">déconnexion</a>
+                </li>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="{{ path('easyadmin') }}">Admin</a>
+                    </li>
+                {% endif %}
+            {% endif %}
             <li class="nav-item">
                 <a class="nav-link text-secondary" href="{{ path('home_gallery') }}">Galerie photos</a>
             </li>
@@ -13,6 +24,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link text-secondary" href="#">Reservation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="{{ path('app_login') }}">Se connecter</a>
             </li>
         </ul>
     </div>
