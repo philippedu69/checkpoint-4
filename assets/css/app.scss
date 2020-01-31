@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap');
+
+$family1: 'Bungee Shade', cursive;
+
 $theme-colors: (
     "primary": rgb(238, 175, 3),
     "secondary": rgb(235, 36, 9)
@@ -6,10 +11,18 @@ $theme-colors: (
 html {
   height: 100%;
 }
+
 body {
   position: relative;
   min-height: 100%;
   padding-bottom: 150px;
+}
+
+#titleCard {
+  font-family: $family1;
+}
+h1 h4 {
+  font-family: $family1;
 }
 
 footer {
@@ -39,5 +52,20 @@ footer {
 
 #logos {
   padding-left: 25%;
+}
+
+// CSS page billet
+
+.ticket {
+  display: flex;
+}
+
+.tarif {
+  margin-left: 1%;
+  margin-top: 3px;
+}
+
+.espaceBillet {
+  display: flex;
 }
 @import "~bootstrap/scss/bootstrap";
